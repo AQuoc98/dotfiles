@@ -7,10 +7,6 @@ export STARSHIP_THEME="nord"
 #
 # [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 #
-# # Secrets
-# [ -f "$HOME/.env" ] && source "$HOME/.env"
-#
-#
 # # Locale settings
 # export LANG="en_US.UTF-8" # Sets default locale for all categories
 # export LC_ALL="en_US.UTF-8" # Overrides all other locale settings
