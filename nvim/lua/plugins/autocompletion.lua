@@ -26,40 +26,46 @@ return { -- Autocompletion
 
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
+
+    -- vs-code like pictograms
+    'onsails/lspkind.nvim',
   },
   config = function()
     local cmp = require 'cmp'
     require('luasnip.loaders.from_vscode').lazy_load()
+
     local luasnip = require 'luasnip'
     luasnip.config.setup {}
 
-    local kind_icons = {
-      Text = '󰉿',
-      Method = 'm',
-      Function = '󰊕',
-      Constructor = '',
-      Field = '',
-      Variable = '󰆧',
-      Class = '󰌗',
-      Interface = '',
-      Module = '',
-      Property = '',
-      Unit = '',
-      Value = '󰎠',
-      Enum = '',
-      Keyword = '󰌋',
-      Snippet = '',
-      Color = '󰏘',
-      File = '󰈙',
-      Reference = '',
-      Folder = '󰉋',
-      EnumMember = '',
-      Constant = '󰇽',
-      Struct = '',
-      Event = '',
-      Operator = '󰆕',
-      TypeParameter = '󰊄',
-    }
+    local lspkind = require 'lspkind'
+
+    -- local kind_icons = {
+    --   Text = '󰉿',
+    --   Method = 'm',
+    --   Function = '󰊕',
+    --   Constructor = '',
+    --   Field = '',
+    --   Variable = '󰆧',
+    --   Class = '󰌗',
+    --   Interface = '',
+    --   Module = '',
+    --   Property = '',
+    --   Unit = '',
+    --   Value = '󰎠',
+    --   Enum = '',
+    --   Keyword = '󰌋',
+    --   Snippet = '',
+    --   Color = '󰏘',
+    --   File = '󰈙',
+    --   Reference = '',
+    --   Folder = '󰉋',
+    --   EnumMember = '',
+    --   Constant = '󰇽',
+    --   Struct = '',
+    --   Event = '',
+    --   Operator = '󰆕',
+    --   TypeParameter = '󰊄',
+    -- }
 
     cmp.setup {
       snippet = {
@@ -73,10 +79,12 @@ return { -- Autocompletion
       --     documentation = cmp.config.window.bordered(),
       -- },
       mapping = cmp.mapping.preset.insert {
-        ['<C-j>'] = cmp.mapping.select_next_item(),       -- Select the [n]ext item
-        ['<C-k>'] = cmp.mapping.select_prev_item(),       -- Select the [p]revious item
+        ['<C-j>'] = cmp.mapping.select_next_item(), -- Select the [n]ext item
+        ['<C-k>'] = cmp.mapping.select_prev_item(), -- Select the [p]revious item
         ['<CR>'] = cmp.mapping.confirm { select = true }, -- Accept the completion with Enter.
-        ['<C-c>'] = cmp.mapping.complete {},              -- Manually trigger a completion from nvim-cmp.
+        ['<C-c>'] = cmp.mapping.complete {}, -- Manually trigger a completion from nvim-cmp.
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
 
         -- Think of <c-l> as moving to the right of your snippet expansion.
         --  So if you have a snippet that's like:
@@ -123,20 +131,26 @@ return { -- Autocompletion
         { name = 'buffer' },
         { name = 'path' },
       },
+      -- formatting = {
+      --   fields = { 'kind', 'abbr', 'menu' },
+      --   format = function(entry, vim_item)
+      --     -- Kind icons
+      --     vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
+      --     -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+      --     vim_item.menu = ({
+      --       nvim_lsp = '[LSP]',
+      --       luasnip = '[Snippet]',
+      --       buffer = '[Buffer]',
+      --       path = '[Path]',
+      --     })[entry.source.name]
+      --     return vim_item
+      --   end,
+      -- },
       formatting = {
-        fields = { 'kind', 'abbr', 'menu' },
-        format = function(entry, vim_item)
-          -- Kind icons
-          vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
-          -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-          vim_item.menu = ({
-            nvim_lsp = '[LSP]',
-            luasnip = '[Snippet]',
-            buffer = '[Buffer]',
-            path = '[Path]',
-          })[entry.source.name]
-          return vim_item
-        end,
+        format = lspkind.cmp_format {
+          maxwidth = 50,
+          ellipsis_char = '...',
+        },
       },
     }
   end,

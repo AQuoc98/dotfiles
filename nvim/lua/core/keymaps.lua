@@ -81,8 +81,10 @@ vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 -- Move text up and down
-vim.keymap.set('v', '<A-j>', ':m .+1<CR>==', opts)
-vim.keymap.set('v', '<A-k>', ':m .-2<CR>==', opts)
+-- vim.keymap.set('v', '<A-j>', ':m .+1<CR>==', opts)
+-- vim.keymap.set('v', '<A-k>', ':m .-2<CR>==', opts)
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", opts)
 
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP', opts)
@@ -98,13 +100,13 @@ vim.keymap.set('n', '<leader>Y', [["+Y]])
 local diagnostics_active = true
 
 vim.keymap.set('n', '<leader>do', function()
-  diagnostics_active = not diagnostics_active
+    diagnostics_active = not diagnostics_active
 
-  if diagnostics_active then
-    vim.diagnostic.enable(0)
-  else
-    vim.diagnostic.disable(0)
-  end
+    if diagnostics_active then
+        vim.diagnostic.enable(0)
+    else
+        vim.diagnostic.disable(0)
+    end
 end)
 
 -- Diagnostic keymaps

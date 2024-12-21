@@ -4,6 +4,7 @@ return {
   build = ':TSUpdate',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'windwp/nvim-ts-autotag',
   },
   config = function()
     require('nvim-treesitter.configs').setup {
@@ -39,7 +40,9 @@ return {
 
       -- Autoinstall languages that are not installed
       auto_install = true,
-
+      autotag = {
+        enable = true,
+      },
       highlight = { enable = true },
       indent = { enable = true },
       incremental_selection = {
