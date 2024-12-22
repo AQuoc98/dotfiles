@@ -50,6 +50,8 @@ require('lazy').setup({
   require 'plugins.misc',
   require 'plugins.vim-tmux-navigator',
   require 'plugins.auto-session',
+  require 'plugins.flutter-tools',
+  require 'plugins.debug',
   -- require 'plugins.none-ls',
   -- require 'plugins.database',
   -- require 'plugins.harpoon',

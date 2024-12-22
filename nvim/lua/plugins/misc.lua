@@ -52,4 +52,14 @@ return {
   {
     'github/copilot.vim',
   },
+  {
+    'stevearc/dressing.nvim',
+    event = 'VeryLazy',
+  },
+  {
+    'barrett-ruth/live-server.nvim',
+    build = 'npm add -g live-server',
+    cmd = { 'LiveServerStart', 'LiveServerStop' },
+    config = true,
+  },
 }

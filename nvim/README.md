@@ -20,6 +20,9 @@ Document
 
 Install support plugins:
 - `brew install lazygit`
+- Mason install manually 
+  - dart-debug-adapter
+
 
 ## Shortcuts
 **Run script**
@@ -34,6 +37,7 @@ Install support plugins:
   - `if` = '@function.inner'
   - `ac` = '@class.outer'
   - `ic` = '@class.inner'
+
 - Move
   - goto_next_start 
     - `]m` = '@function.outer'
@@ -47,6 +51,7 @@ Install support plugins:
   - goto_previous_end
     - `[M` = '@function.outer'
     - `[]` = '@class.outer'
+
 - Swap
   - swap_next
     - `<leader>a` = '@parameter.inner'
@@ -55,6 +60,7 @@ Install support plugins:
 
 **Default Keymap**
 - `space`: leader
+
 - Default
   - `jk`: quit insert mode
   - `esc`: clear highlight when search
@@ -65,6 +71,7 @@ Install support plugins:
   - `<A-j> || <A-k>`: move text up and down
   - `<leader>j`: replace word under cursor
   - `<C-o> || <C-i>`: next, previous action
+
 - Diagnostics
   - `<leader>l`: trigger linting for current file
   - `<leader>do`: toggle
@@ -72,51 +79,109 @@ Install support plugins:
   - `]d`: go to next diagnostic message
   - `<leader>d`: open floating diagnostic message
   - `<leader>q`: open diagnostics list
+
 - Session
   - `<leader>ss`: save
   - `<leader>sl`: load
+  - `<leader>ls`: open list
 - File
   - `<C-s>`: save file
   - `<C-q>`: quit file
   - `<leader>sn`: save file without auto-formatting
   - `<leader>mp`: format selection code
+
 - Buffer
   - `<leader>x`: delete
   - `<leader>b`: new
   - `<Tab> || <S-Tab>`: switch
+
 - Window management
   - `<leader>v`: split window vertically
   - `<leader>h`: split window horizontally
   - `<leader>se`: make split window equal width & height
   - `<leader>xs`: close current split window
   - `<C-j> || <C-k> || <C-l> || <C-h> || <C-\\>`: navigate between split
+
 - Tab
   - `<leader>to`: open new tab
   - `<leader>tx`: close current tab
   - `<leader>tp || <leader>tn`: go to next / previous tab
+
+- Find and replace
+  ```
+  :[range]s[ubstitute]/pattern/replacement/[flags] [count]
+  ```
+  ```
+  - Example 1: Thay thế từ "foo" thành "bar" trong dòng hiện tại
+  :s/foo/bar/
+
+  - Example 2: Thay thế tất cả từ "foo" thành "bar" trong toàn bộ tệp
+  :%s/foo/bar/g
+
+  - Example 3: Hiển thị xác nhận trước khi thay thế
+  :%s/foo/bar/gc
+
+  y: agree, n: skip, a: replace all, q: exit command
+
+  - Example 4: Thay thế trong một phạm vi dòng
+  :10,20s/foo/bar/g
+
+  - Example 5: Sử dụng biểu thức chính quy để thay thế
+  :%s/\<foo\>/bar/g
+
+  Explain: \< và \> xác định ranh giới từ (chỉ thay thế từ "foo" hoàn chỉnh, không thay thế "foobar" hoặc "foot")
+
+  - Example 6: Tham chiếu nhóm trong biểu thức chính quy
+  :%s/\(foo\)\(bar\)/\2\1/g
+
+  Result: "foobar" sẽ trở thành "barfoo"
+
+  - Example 7: Chỉ thay thế dòng đầu tiên của mỗi khớp
+  :g/foo/s/foo/bar/
+
+  - Example 8: Hiển thị số lượng thay thế mà không thực hiện
+  :%s/foo/bar/n
+  ```
+  - Basic search and replace
+    ```
+    Step 1 - search text: /string
+    Step 2 - change text: cgn + replace-string
+    Step 3 - repeat action: .
+    ```
+  - Replacing the first occurrence of ‘original’ with ‘replacement’ in the current line: `:s/pattern/replacement/`
+  - Replacing all occurrences of ‘original’ with ‘replacement’ across all lines in the file: `:%s/pattern/replacement/g`
+  - Change in multiple file by Telescope
+    ```
+    Step 1 - search text by telescope
+    Step 2 - add to quickfix list
+    Step 3 - iterate on instance by cfdo command: :cfdo %s/old-char/new-char/g | update | bd
+    ```
 
 **Plugin**
 - Neotree
   - `<leader>w`: float file exploer
   - `<leader>e`: left file exploer
   - `<leader>ngs`: open git status
+
 - Comment
   - `gcc`: comment line
   - `gc - visual mode`: comment line 
   - `gb - visual mode`: comment block
+
 - Surround
   - `ys{motion}{char}`: add
   - `ds{char}`: delete
   - `cs{target}{replacement}`: change
   - use t char for html tag
+
 - Theme
   - `<leader>bg`: toggle transparency
+
 - Telescope
   - In mode
     - default
       - insert  
-        - `<C-k>`: move to prev result
-        - `<C-j>`: move to next result
+        - `<C-/>`: show help
         - `<C-l>`: open file
       - normal
         - `q`: close
@@ -190,3 +255,21 @@ Install support plugins:
   - `<leader>ghd`: diff this
   - `<leader>ghD`: diff this ~
   - `ih`: gitSigns select hunk
+
+- Flutter Tools: `Flutter...`
+
+- Live Server
+  - `:LiveServerStart`: start the live server
+  - `:LiveServerStop`: stop the live server
+
+- Debug
+  - `<F5>`: start/continue
+  - `<F1>`: step into
+  - `<F2>`: step over
+  - `<F3>`: step out
+  - `<leader>db`: toggle breakpoint
+  - `<leader>dB`: set breakpoint
+  - `<F7>`: see last session result
+
+
+
