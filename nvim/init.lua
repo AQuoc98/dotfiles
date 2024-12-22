@@ -37,7 +37,6 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.lsp',
   require 'plugins.autocompletion',
-  -- require 'plugins.none-ls',
   require 'plugins.lualine',
   require 'plugins.bufferline',
   require 'plugins.neo-tree',
@@ -48,13 +47,15 @@ require('lazy').setup({
   require 'plugins.linting',
   require 'plugins.comment',
   require 'plugins.autopairs',
-  -- require 'plugins.database',
   require 'plugins.misc',
+  require 'plugins.vim-tmux-navigator',
+  require 'plugins.auto-session',
+  -- require 'plugins.none-ls',
+  -- require 'plugins.database',
   -- require 'plugins.harpoon',
   -- require 'plugins.avante',
   -- require 'plugins.chatgpt',
   -- require 'plugins.aerial',
-  require 'plugins.vim-tmux-navigator',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
