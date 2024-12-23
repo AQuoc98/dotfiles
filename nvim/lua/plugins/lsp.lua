@@ -109,7 +109,21 @@ return { -- LSP Configuration & Plugins
     local servers = {
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-      ts_ls = {},
+      ts_ls = {
+        commands = {
+          JsOrganizeImports = {
+            function()
+              local params = {
+                command = '_typescript.organizeImports',
+                arguments = { vim.api.nvim_buf_get_name(0) },
+                title = '',
+              }
+              vim.lsp.buf.execute_command(params)
+            end,
+            description = 'Ruff: Fix all auto-fixable problems',
+          },
+        },
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},

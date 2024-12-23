@@ -13,24 +13,29 @@
 ## Key Commands
 
 Document
-- Cheatsheet: https://vim.rtorr.com/ 
+
+- Cheatsheet: https://vim.rtorr.com/
 - https://www.lazyvim.org/
 - Plugins: https://vimawesome.com/
 - Learn Lua: https://learnxinyminutes.com/lua/
 
 Install support plugins:
+
 - `brew install lazygit`
-- Mason install manually 
+- Mason install manually
   - dart-debug-adapter
 
-
 ## Shortcuts
+
 **Run script**
+
 - Dart: dart run
 - JS: node file.js
 
 **Helpful nvim-treesitter-textobjects (vim motion)**
+
 - Select
+
   - `aa` = '@parameter.outer'
   - `ia` = '@parameter.inner'
   - `af` = '@function.outer'
@@ -39,10 +44,11 @@ Install support plugins:
   - `ic` = '@class.inner'
 
 - Move
-  - goto_next_start 
+
+  - goto_next_start
     - `]m` = '@function.outer'
     - `]]` = '@class.outer'
-  - goto_next_end 
+  - goto_next_end
     - `]M` = '@function.outer'
     - `][` = '@class.outer'
   - goto_previous_start
@@ -59,9 +65,11 @@ Install support plugins:
     - `<leader>A` = '@parameter.inner'
 
 **Default Keymap**
+
 - `space`: leader
 
 - Default
+
   - `jk`: quit insert mode
   - `esc`: clear highlight when search
   - `<leader>lw`: toggle line wrapping
@@ -73,6 +81,7 @@ Install support plugins:
   - `<C-o> || <C-i>`: next, previous action
 
 - Diagnostics
+
   - `<leader>l`: trigger linting for current file
   - `<leader>do`: toggle
   - `[d`: go to previous diagnostic message
@@ -85,17 +94,20 @@ Install support plugins:
   - `<leader>sl`: load
   - `<leader>ls`: open list
 - File
+
   - `<C-s>`: save file
   - `<C-q>`: quit file
   - `<leader>sn`: save file without auto-formatting
   - `<leader>mp`: format selection code
 
 - Buffer
+
   - `<leader>x`: delete
   - `<leader>b`: new
   - `<Tab> || <S-Tab>`: switch
 
 - Window management
+
   - `<leader>v`: split window vertically
   - `<leader>h`: split window horizontally
   - `<leader>se`: make split window equal width & height
@@ -103,14 +115,17 @@ Install support plugins:
   - `<C-j> || <C-k> || <C-l> || <C-h> || <C-\\>`: navigate between split
 
 - Tab
+
   - `<leader>to`: open new tab
   - `<leader>tx`: close current tab
   - `<leader>tp || <leader>tn`: go to next / previous tab
 
 - Find and replace
+
   ```
   :[range]s[ubstitute]/pattern/replacement/[flags] [count]
   ```
+
   ```
   - Example 1: Thay thế từ "foo" thành "bar" trong dòng hiện tại
   :s/foo/bar/
@@ -142,6 +157,7 @@ Install support plugins:
   - Example 8: Hiển thị số lượng thay thế mà không thực hiện
   :%s/foo/bar/n
   ```
+
   - Basic search and replace
     ```
     Step 1 - search text: /string
@@ -158,29 +174,35 @@ Install support plugins:
     ```
 
 **Plugin**
+
 - Neotree
+
   - `<leader>w`: float file exploer
   - `<leader>e`: left file exploer
   - `<leader>ngs`: open git status
 
 - Comment
+
   - `gcc`: comment line
-  - `gc - visual mode`: comment line 
+  - `gc - visual mode`: comment line
   - `gb - visual mode`: comment block
 
 - Surround
+
   - `ys{motion}{char}`: add
   - `ds{char}`: delete
   - `cs{target}{replacement}`: change
   - use t char for html tag
 
 - Theme
+
   - `<leader>bg`: toggle transparency
 
 - Telescope
+
   - In mode
     - default
-      - insert  
+      - insert
         - `<C-/>`: show help
         - `<C-l>`: open file
       - normal
@@ -212,6 +234,7 @@ Install support plugins:
     - `<leader>/`: [/] Fuzzily search in current buffer
 
 - LSP
+
   - `gd`: jump to the definition, jump back `<C-T>`
   - `gr`: find references
   - `gI`: jump to the implementation
@@ -225,8 +248,11 @@ Install support plugins:
   - `<leader>wa`: workspace add folder
   - `<leader>wr`: workspace remove folder
   - `<leader>wl`: workspace list folders
+  - other commands
+    - `JsOrganizeImports`: organize imports
 
 - Auto suggestion
+
   - `<C-j>`: select the next item
   - `<C-k>`: select the previous item
   - `<C-b>`: scroll doc
@@ -237,6 +263,7 @@ Install support plugins:
   - `<Tab> || <S-Tab>`: select next/previous item
 
 - Git
+
   - `<leader>lg`: open lazygit
   - `:Git command-name`: use git in nvim
   - `]h`: next hunk
@@ -259,6 +286,7 @@ Install support plugins:
 - Flutter Tools: `Flutter...`
 
 - Live Server
+
   - `:LiveServerStart`: start the live server
   - `:LiveServerStop`: stop the live server
 
@@ -270,6 +298,3 @@ Install support plugins:
   - `<leader>db`: toggle breakpoint
   - `<leader>dB`: set breakpoint
   - `<F7>`: see last session result
-
-
-
