@@ -27,6 +27,16 @@ Install support plugins:
 
 ## Shortcuts
 
+** VIM in vscode **
+
+- `<S-h>`: tab previous
+- `<S-l>`: tab next
+- `visual mode - J || K`: move line up and down
+- `< || >`: stay in indent mode
+- `<leader>v`: split window vertically
+- `<leader>s`: split window horizontally
+- `<leader> h || j || k || l`: navigate between split
+
 **Run script**
 
 - Dart: dart run
