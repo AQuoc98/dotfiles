@@ -5,10 +5,6 @@
 - Check generate health of Neovim setup. `:checkhealth`
 - Update Treesitter. `:TSUpdate`
 - Check LSP installation. `:Mason`
-- Fix broken icons
-  - Download [nerdfix](https://github.com/loichyan/nerdfix) binary and unpack in home directory.
-  - Run `nerdfix check <path/to/file>` to check broken icons in a file
-  - Run `nerdfix fix <path/to/file>` to fix broken icons in a file
 
 ## Key Commands
 
@@ -27,8 +23,9 @@ Install support plugins:
 
 ## Shortcuts
 
-** VIM in vscode **
+** Vim in vscode **
 
+- Cheatsheet: https://github.com/VSCodeVim/Vim/blob/HEAD/ROADMAP.md
 - `<S-h>`: tab previous
 - `<S-l>`: tab next
 - `visual mode - J || K`: move line up and down
@@ -36,6 +33,20 @@ Install support plugins:
 - `<leader>v`: split window vertically
 - `<leader>s`: split window horizontally
 - `<leader> h || j || k || l`: navigate between split
+- `jk`: quit insert mode
+- `x`: delete text without copy
+- `C-n`: clear search highlight
+- LSP
+  - `gd`: go to definition 
+  - `gpd`: peek definition
+  - `gh`: show hover 
+    - `h j k l`: scroll when hover
+  - `gi`: go to implementations 
+  - `gpi`: peek implementations
+  - `gq`: quick fix (open the code action lightbulb menu)
+  - `gr`: go to references 
+  - `gt`: go to type definition 
+  - `gpt`: peek type definition
 
 **Run script**
 
