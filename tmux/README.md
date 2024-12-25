@@ -16,9 +16,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Install plugins: `Prefix + I`
 
+Reload config tmux in tmux mode: `Prefix + r`
+
+Reload theme: `tmux kill-server && rm -rf /tmp/tmux-*`
+
 ## Shortcuts
 
-Prefix: `CTRL + <Space>`
+Prefix: `CTRL + t`
 
 Sessions:
 - Save sessions: `Prefix + CTRL + s`
