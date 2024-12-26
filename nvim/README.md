@@ -25,7 +25,9 @@ Install support plugins:
 
 ** Vim in vscode **
 
-- Cheatsheet: https://github.com/VSCodeVim/Vim/blob/HEAD/ROADMAP.md
+- Cheatsheet
+  - https://github.com/VSCodeVim/Vim/blob/HEAD/ROADMAP.md
+  - https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/cheatsheet
 - `<S-h>`: tab previous
 - `<S-l>`: tab next
 - `visual mode - J || K`: move line up and down
@@ -37,15 +39,15 @@ Install support plugins:
 - `x`: delete text without copy
 - `C-n`: clear search highlight
 - LSP
-  - `gd`: go to definition 
+  - `gd`: go to definition
   - `gpd`: peek definition
-  - `gh`: show hover 
+  - `gh`: show hover
     - `h j k l`: scroll when hover
-  - `gi`: go to implementations 
+  - `gi`: go to implementations
   - `gpi`: peek implementations
   - `gq`: quick fix (open the code action lightbulb menu)
-  - `gr`: go to references 
-  - `gt`: go to type definition 
+  - `gr`: go to references
+  - `gt`: go to type definition
   - `gpt`: peek type definition
 
 **Run script**
