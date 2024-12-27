@@ -38,6 +38,8 @@ Install support plugins:
 - `jk`: quit insert mode
 - `x`: delete text without copy
 - `C-n`: clear search highlight
+- `<leader>p`: format
+- `<C-z>`: toggle zen mode
 - LSP
   - `gd`: go to definition
   - `gpd`: peek definition
@@ -49,6 +51,13 @@ Install support plugins:
   - `gr`: go to references
   - `gt`: go to type definition
   - `gpt`: peek type definition
+  - `[d || ]d`: show diagnostic
+- File Explore
+  - `<C-e>`: toggle open
+  - `n`: new file
+  - `r`: rename file
+  - `<S-n`: new folder
+  - `d`: delete file
 
 **Run script**
 
