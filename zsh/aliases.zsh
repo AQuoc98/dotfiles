@@ -5,6 +5,7 @@ alias suspend='sudo pm-suspend'
 alias sleep='pmset sleepnow'
 alias c='clear'
 alias e='exit'
+alias ol='ollama'
 
 # Git
 alias g='git'
