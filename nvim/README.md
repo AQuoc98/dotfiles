@@ -49,6 +49,7 @@ Install support plugins:
   - `gpi`: peek implementations
   - `gq`: quick fix (open the code action lightbulb menu)
   - `gr`: go to references
+  - `gs`: rename
   - `gt`: go to type definition
   - `gpt`: peek type definition
   - `[d || ]d`: show diagnostic
