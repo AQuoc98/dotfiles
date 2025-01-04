@@ -59,6 +59,10 @@ Install support plugins:
   - `r`: rename file
   - `<S-n`: new folder
   - `d`: delete file
+- Terminal
+  - `Cmd-J`: toggle terminal visibility
+  - `<C-;>`: switch between terminal and active editor
+  - `<C-S-;>`: maximize/minimize terminal panel and focus terminal
 
 **Run script**
 
