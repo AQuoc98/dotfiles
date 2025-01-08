@@ -5,7 +5,6 @@ alias suspend='sudo pm-suspend'
 alias sleep='pmset sleepnow'
 alias c='clear'
 alias e='exit'
-alias ol='ollama'
 
 # Git
 alias g='git'
@@ -75,7 +74,8 @@ alias v='poetry_run_nvim'
 alias r=". ranger"
 
 # Better ls
-alias ls="eza --all --icons=always"
+alias ls="eza --all --icons=always" -- horizontal
+alias ll="ls -l" -- vertical
 
 # Lazygit
 alias lg="lazygit"
