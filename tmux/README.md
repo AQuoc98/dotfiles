@@ -22,7 +22,7 @@ Reload theme: `tmux kill-server && rm -rf /tmp/tmux-*`
 
 ## Shortcuts
 
-Prefix: `CTRL + a`
+Prefix: `CTRL + b`
 
 Sessions:
 
