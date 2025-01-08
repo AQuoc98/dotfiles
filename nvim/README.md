@@ -131,6 +131,8 @@ Install support plugins:
   - `<leader>ss`: save
   - `<leader>sl`: load
   - `<leader>ls`: open list
+    - `<C-d`: delete session
+    - `<C-y`: copy session
 
 - File
 
