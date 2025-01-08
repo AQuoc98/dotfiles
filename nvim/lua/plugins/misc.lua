@@ -14,19 +14,15 @@ return {
   {
     -- Hints keybinds
     'folke/which-key.nvim',
+    event = 'VeryLazy',
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 500
+    end,
     opts = {
-      -- win = {
-      --   border = {
-      --     { '┌', 'FloatBorder' },
-      --     { '─', 'FloatBorder' },
-      --     { '┐', 'FloatBorder' },
-      --     { '│', 'FloatBorder' },
-      --     { '┘', 'FloatBorder' },
-      --     { '─', 'FloatBorder' },
-      --     { '└', 'FloatBorder' },
-      --     { '│', 'FloatBorder' },
-      --   },
-      -- },
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
     },
   },
   {
@@ -49,9 +45,6 @@ return {
     version = '*', -- Use for stability; omit to use `main` branch for the latest features
     config = true,
   },
-  -- {
-  --   'github/copilot.vim',
-  -- },
   {
     'stevearc/dressing.nvim',
     event = 'VeryLazy',
@@ -61,5 +54,34 @@ return {
     build = 'npm add -g live-server',
     cmd = { 'LiveServerStart', 'LiveServerStop' },
     config = true,
+  },
+  {
+    'szw/vim-maximizer',
+    keys = {
+      { '<leader>mt', '<cmd>MaximizerToggle<CR>', desc = 'Maximize/minimize a split' },
+    },
+  },
+  {
+    'gbprod/substitute.nvim',
+    event = { 'BufReadPre', 'BufNewFile' },
+    config = function()
+      local substitute = require 'substitute'
+
+      substitute.setup()
+
+      -- set keymaps
+      local keymap = vim.keymap -- for conciseness
+
+      keymap.set('n', 's', substitute.operator, { desc = 'Substitute with motion' })
+      keymap.set('n', 'ss', substitute.line, { desc = 'Substitute line' })
+      keymap.set('n', 'S', substitute.eol, { desc = 'Substitute to end of line' })
+      keymap.set('x', 's', substitute.visual, { desc = 'Substitute in visual mode' })
+    end,
+  },
+  {
+    'mg979/vim-visual-multi',
+    branch = 'master',
+    lazy = false,
+    config = function() end,
   },
 }

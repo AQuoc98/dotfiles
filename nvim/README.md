@@ -113,7 +113,7 @@ Install support plugins:
   - resize with arrow
   - `<leader>+ || <leader>-`: increment/decrement number
   - `< || >`: stay in indent mode
-  - `<A-j> || <A-k>`: move text up and down
+  - `<A-j> || <A-k>`: in visual mode - move line up and down
   - `<leader>j`: replace word under cursor
   - `<C-o> || <C-i>`: next, previous action
 
@@ -127,9 +127,11 @@ Install support plugins:
   - `<leader>q`: open diagnostics list
 
 - Session
+
   - `<leader>ss`: save
   - `<leader>sl`: load
   - `<leader>ls`: open list
+
 - File
 
   - `<C-s>`: save file
@@ -149,6 +151,7 @@ Install support plugins:
   - `<leader>h`: split window horizontally
   - `<leader>se`: make split window equal width & height
   - `<leader>xs`: close current split window
+  - `<leader>mt`: Maximize/minimize a split
   - `<C-j> || <C-k> || <C-l> || <C-h> || <C-\\>`: navigate between split
 
 - Tab
@@ -209,6 +212,11 @@ Install support plugins:
     Step 2 - add to quickfix list
     Step 3 - iterate on instance by cfdo command: :cfdo %s/old-char/new-char/g | update | bd
     ```
+
+- Multiple Line Cursor:
+  - `<C-n>`: select the world
+  - `n` or `N`: find next or previous
+  - `q`: skip and go to next
 
 **Plugin**
 
@@ -328,10 +336,17 @@ Install support plugins:
   - `:LiveServerStop`: stop the live server
 
 - Debug
+
   - `<F5>`: start/continue
   - `<F1>`: step into
   - `<F2>`: step over
   - `<F3>`: step out
   - `<leader>db`: toggle breakpoint
   - `<leader>dB`: set breakpoint
-  - `<F7>`: see last session result
+  - `<F7>`: see last session Result
+
+- Substitute
+  - `s` : substitute with motion
+  - `ss`: substitute line
+  - `S` : substitute to end of line
+  - `s` : substitute in visual mode

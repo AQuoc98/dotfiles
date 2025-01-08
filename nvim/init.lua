@@ -78,6 +78,9 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
+  change_detection = {
+    notify = false,
+  },
 })
 
 -- Function to check if a file exists
