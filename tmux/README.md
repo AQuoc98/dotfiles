@@ -22,24 +22,16 @@ Reload theme: `tmux kill-server && rm -rf /tmp/tmux-*`
 
 ## Shortcuts
 
-Prefix: `CTRL + t`
+Prefix: `CTRL + a`
 
 Sessions:
+
 - Save sessions: `Prefix + CTRL + s`
 - Restore session: `Prefix + CTRL + r`
 
 Pane:
+
 - Resize pane: `Prefix + j k l h`
 - Maximize pane: `Prefix + m`
-- Split horizontal: `Prefix + \` 
+- Split horizontal: `Prefix + \`
 - Split vertical: `Prefix + -`
-
-
-
-
-
-
-
-
-
-
