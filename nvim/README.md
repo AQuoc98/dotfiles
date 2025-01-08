@@ -116,6 +116,7 @@ Install support plugins:
   - `<A-j> || <A-k>`: in visual mode - move line up and down
   - `<leader>j`: replace word under cursor
   - `<C-o> || <C-i>`: next, previous action
+  - `<C-a`: select all
 
 - Diagnostics
 
@@ -347,7 +348,7 @@ Install support plugins:
   - `<leader>dB`: set breakpoint
   - `<F7>`: see last session Result
 
-- Substitute
+- Substitute: replace and exchange text
   - `s` : substitute with motion
   - `ss`: substitute line
   - `S` : substitute to end of line
