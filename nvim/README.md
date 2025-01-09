@@ -118,6 +118,7 @@ Install support plugins:
   - `<C-o> || <C-i>`: next, previous action
   - `<C-a`: select all
   - `<leader>y`: open YAZI
+  - `<leader>z`: toggle zen mode
 
 - Diagnostics
 

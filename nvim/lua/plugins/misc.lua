@@ -84,4 +84,27 @@ return {
     lazy = false,
     config = function() end,
   },
+  {
+    'folke/zen-mode.nvim',
+    cmd = 'ZenMode',
+    opts = {
+      plugins = {
+        gitsigns = true,
+        tmux = true,
+        kitty = { enabled = false, font = '+2' },
+      },
+    },
+    keys = { { '<leader>z', '<cmd>ZenMode<cr>', desc = 'Zen Mode' } },
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    version = '1.0.0',
+    event = 'InsertEnter',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end,
+  },
 }

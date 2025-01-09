@@ -5,38 +5,27 @@ return {
   build = ':TSUpdate',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
-    'windwp/nvim-ts-autotag',
   },
   config = function()
     require('nvim-treesitter.configs').setup {
       -- Add languages to be installed here that you want installed for treesitter
       ensure_installed = {
         'lua',
-        'python',
         'javascript',
         'typescript',
         'angular',
         'dart',
-        'vimdoc',
-        'vim',
-        'regex',
         'sql',
-        'dockerfile',
-        'toml',
         'json',
-        'groovy',
         'go',
         'gitignore',
         'graphql',
         'yaml',
-        'make',
         'cmake',
-        'markdown',
-        'markdown_inline',
-        'bash',
         'tsx',
         'css',
         'html',
+        'scss',
       },
 
       -- Autoinstall languages that are not installed
