@@ -234,6 +234,7 @@ return { -- LSP Configuration & Plugins
       ltex = {},
       texlab = {},
       angularls = {},
+      eslint = {},
     }
 
     -- Ensure the servers and tools above are installed

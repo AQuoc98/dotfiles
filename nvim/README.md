@@ -117,6 +117,7 @@ Install support plugins:
   - `<leader>j`: replace word under cursor
   - `<C-o> || <C-i>`: next, previous action
   - `<C-a`: select all
+  - `<leader>y`: open YAZI
 
 - Diagnostics
 
@@ -145,6 +146,7 @@ Install support plugins:
 - Buffer
 
   - `<leader>x`: delete
+  - `<leader>xa`: close all buffer
   - `<leader>b`: new
   - `<Tab> || <S-Tab>`: switch
 
@@ -324,7 +326,6 @@ Install support plugins:
   - `<leader>ghu`: undo stage hunk
   - `<leader>ghR`: reset buffer
   - `<leader>ghp`: preview hunk inline
-  - `<leader>gtb`: blame buffer
   - `<leader>ghb`: blame line
   - `<leader>ghB`: blame buffer
   - `<leader>ghd`: diff this
