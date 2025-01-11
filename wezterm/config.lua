@@ -20,7 +20,7 @@ config = {
 	font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
 	enable_tab_bar = false,
 	animation_fps = 1,
-	max_fps = 120,
+	max_fps = 240,
 	window_padding = {
 		left = 3,
 		right = 3,

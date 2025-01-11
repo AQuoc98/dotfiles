@@ -26,13 +26,15 @@ return {
         'css',
         'html',
         'scss',
+        'markdown',
+        'markdown_inline',
       },
 
       -- Autoinstall languages that are not installed
       auto_install = true,
-      autotag = {
-        enable = true,
-      },
+      -- autotag = {
+      --   enable = true,
+      -- },
       highlight = { enable = true },
       indent = { enable = true },
       incremental_selection = {

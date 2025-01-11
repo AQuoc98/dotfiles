@@ -72,7 +72,11 @@ Install support plugins:
 **Helpful nvim-treesitter-textobjects (vim motion)**
 
 - Select
+  - `<c-space>` = init_selection 
+  - `<c-space>` = node_incremental 
+  - `<c-s>` = scope_incremental 
 
+- `<M-space>` = node_decremental
   - `aa` = '@parameter.outer'
   - `ia` = '@parameter.inner'
   - `af` = '@function.outer'
@@ -304,12 +308,12 @@ Install support plugins:
 
 - Auto suggestion
 
-  - `<C-j>`: select the next item
-  - `<C-k>`: select the previous item
-  - `<C-b>`: scroll doc
-  - `<C-f>`: scroll doc
-  - `<C-l>`: move you to the right of each of the expansion locations
-  - `<C-h>`: moving you backwards of each of the expansion locations
+  <!-- - `<C-j>`: select the next item -->
+  <!-- - `<C-k>`: select the previous item -->
+  - `<C-k>`: scroll doc
+  - `<C-j>`: scroll doc
+  <!-- - `<C-l>`: move you to the right of each of the expansion locations -->
+  <!-- - `<C-h>`: moving you backwards of each of the expansion locations -->
   - `<C-c>`: manually trigger a completion from nvim-cmp
   - `<Tab> || <S-Tab>`: select next/previous item
 
