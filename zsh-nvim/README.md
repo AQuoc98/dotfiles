@@ -7,7 +7,7 @@
 
 - Fonts
 
-  - Serach font: brew search nerd-font
+  - Search font: brew search nerd-font
   - Installed fonts: fira-code, fira-mono, symbols-only, hack
 
 - zsh-syntax-highlighting
