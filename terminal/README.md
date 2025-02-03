@@ -5,7 +5,9 @@
 - Fonts
 
   - Search font: brew search nerd-font
-  - Installed fonts: fira-code, fira-mono
+  - Installed fonts: 
+    - For Terminal: blex-mono, 
+    - For Vscode: jira-code, jira-mono 
 
 - Warp
 
